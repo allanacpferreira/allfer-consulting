@@ -1,14 +1,14 @@
 <nav class="nav">
   <div class="nav__inner">
-    <a href="/" class="nav__logo">Allfer<span>.</span></a>
+    <a href="{{ '/' | relative_url }}" class="nav__logo">Allfer<span>.</span></a>
     <ul class="nav__links">
-      <li><a href="/services/">Services</a></li>
-      <li><a href="/capabilities/">Capabilities</a></li>
-      <li><a href="/case-studies/">Case Studies</a></li>
-      <li><a href="/dashboard/">Dashboard</a></li>
-      <li><a href="/decisions/">Decisions</a></li>
-      <li><a href="/research/">Research</a></li>
-      <li><a href="/contact/">Contact</a></li>
+      <li><a href="{{ '/services/' | relative_url }}">Services</a></li>
+      <li><a href="{{ '/capabilities/' | relative_url }}">Capabilities</a></li>
+      <li><a href="{{ '/case-studies/' | relative_url }}">Case Studies</a></li>
+      <li><a href="{{ '/dashboard/' | relative_url }}">Dashboard</a></li>
+      <li><a href="{{ '/decisions/' | relative_url }}">Decisions</a></li>
+      <li><a href="{{ '/research/' | relative_url }}">Research</a></li>
+      <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
     </ul>
   </div>
 </nav>
