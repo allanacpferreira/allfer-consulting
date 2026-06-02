@@ -1,8 +1,11 @@
-<footer class="footer">
+<footer class="footer" role="contentinfo">
   <div class="container">
     <div class="footer__inner">
       <span>Allfer Consulting LLC &mdash; Miami, Florida &mdash; Founded 2026</span>
-      <span>Chairman: Allana Ferreira</span>
+      <nav aria-label="Footer navigation">
+        <a href="{{ '/contact/' | relative_url }}" style="color:var(--color-text-muted); font-size:0.8rem; margin-right:16px;">Contact</a>
+        <a href="{{ '/dashboard/' | relative_url }}" style="color:var(--color-text-muted); font-size:0.8rem;">Dashboard</a>
+      </nav>
     </div>
   </div>
 </footer>

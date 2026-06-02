@@ -1,0 +1,305 @@
+---
+layout: default
+title: Weekly Industry Report
+description: Weekly briefing on enterprise UX, service design, and AI product design — curated for Allfer Consulting by the Research Agent.
+permalink: /weekly-report/
+---
+
+<section class="section">
+  <div class="container">
+    <div class="section__header">
+      <div class="section__label">Research Agent · Weekly Briefing</div>
+      <h1 class="section__title">Industry Report</h1>
+      <p class="section__subtitle">Live feed of what's moving in enterprise UX, service design, AI product design, and the consulting industry. Updated automatically from primary sources. Generated for the founding team and Chairman.</p>
+      <p id="report-date" style="font-size:0.8rem; color:var(--color-text-muted); margin-top:8px;">Loading latest articles...</p>
+    </div>
+
+    <!-- Source Filter -->
+    <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:32px;" role="group" aria-label="Filter by topic">
+      <button class="filter-btn active" data-filter="all" aria-pressed="true">All Topics</button>
+      <button class="filter-btn" data-filter="enterprise-ux" aria-pressed="false">Enterprise UX</button>
+      <button class="filter-btn" data-filter="service-design" aria-pressed="false">Service Design</button>
+      <button class="filter-btn" data-filter="ai-design" aria-pressed="false">AI &amp; Product</button>
+      <button class="filter-btn" data-filter="consulting" aria-pressed="false">Consulting Industry</button>
+    </div>
+
+    <!-- Feed Grid -->
+    <div id="report-grid" style="display:grid; grid-template-columns: repeat(2, 1fr); gap:16px;" aria-live="polite" aria-label="Industry articles">
+      <!-- Skeleton loaders -->
+      <div class="card skeleton" aria-hidden="true"><div style="height:12px;background:var(--color-border);border-radius:4px;width:40%;margin-bottom:12px;"></div><div style="height:20px;background:var(--color-border);border-radius:4px;margin-bottom:10px;"></div><div style="height:14px;background:var(--color-border);border-radius:4px;width:90%;margin-bottom:6px;"></div><div style="height:14px;background:var(--color-border);border-radius:4px;width:70%;"></div></div>
+      <div class="card skeleton" aria-hidden="true"><div style="height:12px;background:var(--color-border);border-radius:4px;width:40%;margin-bottom:12px;"></div><div style="height:20px;background:var(--color-border);border-radius:4px;margin-bottom:10px;"></div><div style="height:14px;background:var(--color-border);border-radius:4px;width:90%;margin-bottom:6px;"></div><div style="height:14px;background:var(--color-border);border-radius:4px;width:70%;"></div></div>
+      <div class="card skeleton" aria-hidden="true"><div style="height:12px;background:var(--color-border);border-radius:4px;width:40%;margin-bottom:12px;"></div><div style="height:20px;background:var(--color-border);border-radius:4px;margin-bottom:10px;"></div><div style="height:14px;background:var(--color-border);border-radius:4px;width:90%;margin-bottom:6px;"></div><div style="height:14px;background:var(--color-border);border-radius:4px;width:70%;"></div></div>
+      <div class="card skeleton" aria-hidden="true"><div style="height:12px;background:var(--color-border);border-radius:4px;width:40%;margin-bottom:12px;"></div><div style="height:20px;background:var(--color-border);border-radius:4px;margin-bottom:10px;"></div><div style="height:14px;background:var(--color-border);border-radius:4px;width:90%;margin-bottom:6px;"></div><div style="height:14px;background:var(--color-border);border-radius:4px;width:70%;"></div></div>
+    </div>
+
+    <div id="report-error" style="display:none;" role="alert">
+      <div class="card" style="text-align:center; padding:48px;">
+        <p style="color:var(--color-text-muted); margin-bottom:8px;">Unable to load live feeds right now.</p>
+        <p style="font-size:0.85rem; color:var(--color-text-muted);">This is usually a temporary network issue. The curated sources below are always available.</p>
+      </div>
+    </div>
+
+    <!-- Curated Sources Reference -->
+    <div class="section__header mt-xl">
+      <div class="section__label">Source List</div>
+      <h2 class="section__title" style="font-size:1.5rem;">What the Research Agent monitors.</h2>
+    </div>
+    <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:16px;">
+      <div class="card">
+        <div class="card__label">Enterprise UX &amp; Design</div>
+        <ul style="margin-top:12px; list-style:none; display:flex; flex-direction:column; gap:8px; font-size:0.875rem;">
+          <li><a href="https://www.nngroup.com/articles/" target="_blank" rel="noopener noreferrer" style="color:var(--color-accent-light);">Nielsen Norman Group</a><span style="color:var(--color-text-muted);"> — UX research and articles</span></li>
+          <li><a href="https://uxdesign.cc" target="_blank" rel="noopener noreferrer" style="color:var(--color-accent-light);">UX Collective</a><span style="color:var(--color-text-muted);"> — practitioner perspectives</span></li>
+          <li><a href="https://www.smashingmagazine.com/category/ux-design/" target="_blank" rel="noopener noreferrer" style="color:var(--color-accent-light);">Smashing Magazine</a><span style="color:var(--color-text-muted);"> — UX &amp; product design</span></li>
+          <li><a href="https://alistapart.com" target="_blank" rel="noopener noreferrer" style="color:var(--color-accent-light);">A List Apart</a><span style="color:var(--color-text-muted);"> — web &amp; content strategy</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card__label">Service Design &amp; Strategy</div>
+        <ul style="margin-top:12px; list-style:none; display:flex; flex-direction:column; gap:8px; font-size:0.875rem;">
+          <li><a href="https://www.servicedesignnetwork.org" target="_blank" rel="noopener noreferrer" style="color:var(--color-accent-light);">Service Design Network</a><span style="color:var(--color-text-muted);"> — global SDN publication</span></li>
+          <li><a href="https://hbr.org/topic/subject/design" target="_blank" rel="noopener noreferrer" style="color:var(--color-accent-light);">Harvard Business Review</a><span style="color:var(--color-text-muted);"> — design &amp; strategy</span></li>
+          <li><a href="https://www.mckinsey.com/capabilities/mckinsey-design/our-insights" target="_blank" rel="noopener noreferrer" style="color:var(--color-accent-light);">McKinsey Design</a><span style="color:var(--color-text-muted);"> — design business value</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card__label">AI &amp; Product Design</div>
+        <ul style="margin-top:12px; list-style:none; display:flex; flex-direction:column; gap:8px; font-size:0.875rem;">
+          <li><a href="https://www.nngroup.com/topic/ai/" target="_blank" rel="noopener noreferrer" style="color:var(--color-accent-light);">NNG — AI UX</a><span style="color:var(--color-text-muted);"> — AI experience design research</span></li>
+          <li><a href="https://www.producttalk.org" target="_blank" rel="noopener noreferrer" style="color:var(--color-accent-light);">Product Talk</a><span style="color:var(--color-text-muted);"> — continuous discovery</span></li>
+          <li><a href="https://www.lennysnewsletter.com" target="_blank" rel="noopener noreferrer" style="color:var(--color-accent-light);">Lenny's Newsletter</a><span style="color:var(--color-text-muted);"> — product &amp; growth</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card__label">Consulting &amp; Business</div>
+        <ul style="margin-top:12px; list-style:none; display:flex; flex-direction:column; gap:8px; font-size:0.875rem;">
+          <li><a href="https://www.consultingmag.com" target="_blank" rel="noopener noreferrer" style="color:var(--color-accent-light);">Consulting Magazine</a><span style="color:var(--color-text-muted);"> — industry news</span></li>
+          <li><a href="https://forrester.com/blogs/" target="_blank" rel="noopener noreferrer" style="color:var(--color-accent-light);">Forrester Blog</a><span style="color:var(--color-text-muted);"> — enterprise tech &amp; CX research</span></li>
+          <li><a href="https://www.gartner.com/en/articles" target="_blank" rel="noopener noreferrer" style="color:var(--color-accent-light);">Gartner</a><span style="color:var(--color-text-muted);"> — enterprise technology insights</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.filter-btn {
+  background: var(--color-slate);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: var(--font-sans);
+}
+.filter-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-text);
+}
+.filter-btn.active,
+.filter-btn[aria-pressed="true"] {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+}
+.filter-btn:focus-visible {
+  outline: 2px solid var(--color-accent-light);
+  outline-offset: 3px;
+}
+.article-card {
+  background: var(--color-slate);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  transition: border-color 0.15s;
+  text-decoration: none;
+  display: block;
+}
+.article-card:hover {
+  border-color: var(--color-accent);
+  text-decoration: none;
+}
+.article-card:focus-visible {
+  outline: 2px solid var(--color-accent-light);
+  outline-offset: 3px;
+}
+.article-source {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent-light);
+  margin-bottom: 8px;
+}
+.article-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+.article-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.article-meta {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+</style>
+
+<script>
+// RSS sources via rss2json API (free, CORS-enabled)
+const RSS2JSON = 'https://api.rss2json.com/v1/api.json?rss_url=';
+
+const SOURCES = [
+  {
+    name: 'NNG',
+    tag: 'enterprise-ux',
+    label: 'Enterprise UX',
+    url: 'https://feeds.feedburner.com/nngroup/BaKu',
+    fallback: 'https://www.nngroup.com/feed/rss/'
+  },
+  {
+    name: 'UX Collective',
+    tag: 'enterprise-ux',
+    label: 'Enterprise UX',
+    url: 'https://uxdesign.cc/feed'
+  },
+  {
+    name: 'Smashing Magazine',
+    tag: 'enterprise-ux',
+    label: 'Enterprise UX',
+    url: 'https://www.smashingmagazine.com/feed/'
+  },
+  {
+    name: 'A List Apart',
+    tag: 'service-design',
+    label: 'Service Design',
+    url: 'https://alistapart.com/main/feed/'
+  },
+  {
+    name: 'UX Planet',
+    tag: 'ai-design',
+    label: 'AI & Product',
+    url: 'https://uxplanet.org/feed'
+  },
+  {
+    name: 'Product Talk',
+    tag: 'ai-design',
+    label: 'AI & Product',
+    url: 'https://www.producttalk.org/feed/'
+  }
+];
+
+let allArticles = [];
+let activeFilter = 'all';
+
+function timeAgo(dateStr) {
+  const date = new Date(dateStr);
+  const now = new Date();
+  const diff = Math.floor((now - date) / 1000);
+  if (diff < 3600) return `${Math.floor(diff/60)}m ago`;
+  if (diff < 86400) return `${Math.floor(diff/3600)}h ago`;
+  if (diff < 604800) return `${Math.floor(diff/86400)}d ago`;
+  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+}
+
+function stripHtml(html) {
+  const div = document.createElement('div');
+  div.innerHTML = html;
+  return div.textContent || div.innerText || '';
+}
+
+function renderArticles() {
+  const grid = document.getElementById('report-grid');
+  const filtered = activeFilter === 'all'
+    ? allArticles
+    : allArticles.filter(a => a.tag === activeFilter);
+
+  if (filtered.length === 0) {
+    grid.innerHTML = '<div class="card" style="grid-column:1/-1;text-align:center;padding:48px;"><p style="color:var(--color-text-muted);">No articles found for this topic yet.</p></div>';
+    return;
+  }
+
+  grid.innerHTML = filtered.slice(0, 12).map(a => `
+    <a href="${a.link}" target="_blank" rel="noopener noreferrer" class="article-card" data-tag="${a.tag}">
+      <div class="article-source">${a.source}</div>
+      <div class="article-title">${a.title}</div>
+      <div class="article-desc">${a.desc.slice(0, 120)}${a.desc.length > 120 ? '…' : ''}</div>
+      <div class="article-meta">
+        <span class="pill pill--blue" style="font-size:0.65rem;">${a.label}</span>
+        <span>${timeAgo(a.date)}</span>
+      </div>
+    </a>
+  `).join('');
+}
+
+async function fetchFeed(source) {
+  const res = await fetch(`${RSS2JSON}${encodeURIComponent(source.url)}&count=5`);
+  if (!res.ok) throw new Error('fetch failed');
+  const data = await res.json();
+  if (data.status !== 'ok') throw new Error('bad status');
+  return data.items.map(item => ({
+    source: source.name,
+    tag: source.tag,
+    label: source.label,
+    title: item.title,
+    link: item.link,
+    desc: stripHtml(item.description || item.content || ''),
+    date: item.pubDate
+  }));
+}
+
+async function loadAllFeeds() {
+  const grid = document.getElementById('report-grid');
+  const dateEl = document.getElementById('report-date');
+  let loaded = 0;
+
+  const results = await Promise.allSettled(SOURCES.map(fetchFeed));
+
+  results.forEach(r => {
+    if (r.status === 'fulfilled') {
+      allArticles = allArticles.concat(r.value);
+      loaded++;
+    }
+  });
+
+  // Sort by date descending
+  allArticles.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+  if (allArticles.length === 0) {
+    document.getElementById('report-error').style.display = 'block';
+    grid.innerHTML = '';
+    return;
+  }
+
+  dateEl.textContent = `${allArticles.length} articles loaded from ${loaded} sources · ${new Date().toLocaleDateString('en-US', { weekday:'long', year:'numeric', month:'long', day:'numeric' })}`;
+  renderArticles();
+}
+
+// Filter buttons
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed', 'false');
+    });
+    btn.classList.add('active');
+    btn.setAttribute('aria-pressed', 'true');
+    activeFilter = btn.dataset.filter;
+    renderArticles();
+  });
+});
+
+loadAllFeeds();
+</script>
