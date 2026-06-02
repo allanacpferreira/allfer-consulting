@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<div class="section">
+  <div class="container--narrow">
+    <div class="mt-md">
+      <a href="/case-studies/" class="text-muted" style="font-size:0.85rem;">← All Case Studies</a>
+    </div>
+    <div class="section__header mt-lg">
+      <div class="section__label">Case Study</div>
+      {% if page.status == "placeholder" %}
+      <span class="pill pill--muted" style="margin-bottom:12px; display:inline-flex;">Placeholder — Forthcoming</span>
+      {% endif %}
+      <h1 class="section__title">{{ page.title }}</h1>
+      {% if page.client %}<p class="text-muted" style="margin-top:4px;">{{ page.client }}</p>{% endif %}
+      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:12px;">
+        {% for tag in page.tags %}
+        <span class="pill pill--blue">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="prose mt-lg">
+      {{ content }}
+    </div>
+  </div>
+</div>

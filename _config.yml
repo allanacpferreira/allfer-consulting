@@ -1,0 +1,77 @@
+title: Allfer Consulting
+description: Senior UX and Service Design Consultancy for Enterprise Systems
+url: "https://allfer.consulting"
+baseurl: ""
+
+author:
+  name: Allana Ferreira
+  title: Chairman & Senior UX Consultant
+
+# Collections
+collections:
+  decisions:
+    output: true
+    permalink: /decisions/:name/
+  research:
+    output: true
+    permalink: /research/:name/
+  risks:
+    output: true
+    permalink: /risks/:name/
+  services:
+    output: true
+    permalink: /services/:name/
+  case-studies:
+    output: true
+    permalink: /case-studies/:name/
+  ip-roadmap:
+    output: true
+    permalink: /ip/:name/
+  prompts:
+    output: true
+    permalink: /prompts/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "decisions"
+    values:
+      layout: "decision"
+  - scope:
+      path: ""
+      type: "research"
+    values:
+      layout: "research"
+  - scope:
+      path: ""
+      type: "risks"
+    values:
+      layout: "risk"
+  - scope:
+      path: ""
+      type: "services"
+    values:
+      layout: "service"
+  - scope:
+      path: ""
+      type: "case-studies"
+    values:
+      layout: "case-study"
+  - scope:
+      path: ""
+      type: "prompts"
+    values:
+      layout: "prompt"
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+markdown: kramdown
+highlighter: rouge
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules

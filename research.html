@@ -1,0 +1,29 @@
+---
+layout: default
+title: Research
+description: Market research, competitive analysis, and strategic learning conducted by the Allfer Consulting founding team.
+---
+
+<section class="section">
+  <div class="container">
+    <div class="section__header">
+      <div class="section__label">Market Research</div>
+      <h1 class="section__title">What we're learning.</h1>
+      <p class="section__subtitle">Ongoing research into enterprise UX market conditions, competitive landscape, client pain points, and positioning opportunities. Research drives strategy — it is not decorative.</p>
+    </div>
+    <div class="grid grid--2">
+      {% assign sorted_research = site.research | sort: 'date' | reverse %}
+      {% for item in sorted_research %}
+      <div class="card">
+        <div class="card__label">{{ item.topic }}</div>
+        <h3 class="card__title"><a href="{{ item.url }}" style="color:var(--color-text); text-decoration:none;">{{ item.title }}</a></h3>
+        <p class="card__body">{{ item.summary | truncate: 160 }}</p>
+        <div style="margin-top:12px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:0.8rem; color:var(--color-text-muted);">{{ item.date | date: "%b %Y" }}</span>
+          <a href="{{ item.url }}" style="font-size:0.8rem; color:var(--color-accent-light);">Read →</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

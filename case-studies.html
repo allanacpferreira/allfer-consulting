@@ -1,0 +1,35 @@
+---
+layout: default
+title: Case Studies
+description: Client engagements and work examples from Allfer Consulting.
+---
+
+<section class="section">
+  <div class="container">
+    <div class="section__header">
+      <div class="section__label">Case Studies</div>
+      <h1 class="section__title">The work.</h1>
+      <p class="section__subtitle">Case studies are published as engagements complete. Placeholder structures are set up for forthcoming client work. All case studies reflect the Chairman's actual delivery standards.</p>
+    </div>
+
+    <div class="grid grid--2">
+      {% assign sorted_cases = site.case-studies | sort: 'date' | reverse %}
+      {% for case in sorted_cases %}
+      <div class="card" {% if case.status == "placeholder" %}style="opacity:0.6;"{% endif %}>
+        {% if case.status == "placeholder" %}
+        <span class="pill pill--muted" style="margin-bottom:12px; display:inline-flex;">Forthcoming</span>
+        {% endif %}
+        <div class="card__label">{{ case.industry }}</div>
+        <h3 class="card__title"><a href="{{ case.url }}" style="color:var(--color-text); text-decoration:none;">{{ case.title }}</a></h3>
+        {% if case.client %}<p style="font-size:0.8rem; color:var(--color-text-muted); margin-top:4px;">{{ case.client }}</p>{% endif %}
+        <p class="card__body" style="margin-top:10px;">{{ case.summary | truncate: 160 }}</p>
+        <div style="margin-top:12px; display:flex; gap:6px; flex-wrap:wrap;">
+          {% for tag in case.tags %}
+          <span class="pill pill--muted">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

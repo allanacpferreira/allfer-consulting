@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<div class="section">
+  <div class="container--narrow">
+    <div class="mt-md">
+      <a href="/decisions/" class="text-muted" style="font-size:0.85rem;">← All Decisions</a>
+    </div>
+    <div class="section__header mt-lg">
+      <div class="section__label">Decision Record</div>
+      <h1 class="section__title">{{ page.title }}</h1>
+      <div style="display:flex; gap:12px; align-items:center; margin-top:12px; flex-wrap:wrap;">
+        <span class="pill pill--{{ page.status_color | default: 'blue' }}">{{ page.status }}</span>
+        <span class="text-muted" style="font-size:0.85rem;">{{ page.date | date: "%B %d, %Y" }}</span>
+        {% if page.author %}<span class="text-muted" style="font-size:0.85rem;">by {{ page.author }}</span>{% endif %}
+      </div>
+    </div>
+
+    {% if page.context %}
+    <div class="card mt-lg">
+      <div class="card__label">Context</div>
+      <p class="card__body">{{ page.context }}</p>
+    </div>
+    {% endif %}
+
+    <div class="prose mt-lg">
+      {{ content }}
+    </div>
+
+    {% if page.outcome %}
+    <div class="card mt-lg" style="border-color: rgba(62,207,142,0.25);">
+      <div class="card__label">Outcome / Result</div>
+      <p class="card__body">{{ page.outcome }}</p>
+    </div>
+    {% endif %}
+  </div>
+</div>

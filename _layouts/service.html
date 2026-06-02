@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<div class="section">
+  <div class="container--narrow">
+    <div class="mt-md">
+      <a href="/services/" class="text-muted" style="font-size:0.85rem;">← All Services</a>
+    </div>
+    <div class="section__header mt-lg">
+      <div class="section__label">Service</div>
+      <h1 class="section__title">{{ page.title }}</h1>
+      {% if page.price %}
+      <p style="font-size:1.5rem; font-weight:700; color: var(--color-accent-light); margin-top:12px;">{{ page.price }}</p>
+      {% endif %}
+      {% if page.engagement_type %}
+      <span class="pill pill--blue mt-sm">{{ page.engagement_type }}</span>
+      {% endif %}
+    </div>
+    <div class="prose mt-lg">
+      {{ content }}
+    </div>
+    {% if page.deliverables %}
+    <div class="card mt-lg">
+      <div class="card__label">Deliverables</div>
+      <ul style="margin-top:8px; padding-left:20px; color: var(--color-text-muted); font-size:0.9rem; line-height:2;">
+        {% for item in page.deliverables %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </div>
+</div>

@@ -1,0 +1,31 @@
+---
+layout: default
+title: Decision Log
+description: Full record of strategic, operational, and positioning decisions made by the Allfer Consulting founding team.
+---
+
+<section class="section">
+  <div class="container">
+    <div class="section__header">
+      <div class="section__label">Decision Log</div>
+      <h1 class="section__title">How the company was built.</h1>
+      <p class="section__subtitle">Every meaningful decision made by the founding team is recorded here — what was decided, why, and what changed as a result. This is the audit trail of the company's strategy.</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:0;">
+      {% assign sorted_decisions = site.decisions | sort: 'date' | reverse %}
+      {% for decision in sorted_decisions %}
+      <div class="log-entry">
+        <div class="log-entry__date">
+          {{ decision.date | date: "%b %d, %Y" }}<br>
+          <span class="pill pill--{{ decision.status_color | default: 'blue' }}" style="margin-top:6px; display:inline-flex;">{{ decision.status }}</span>
+        </div>
+        <div class="log-entry__content">
+          <h3><a href="{{ decision.url }}" style="color:var(--color-text); text-decoration:none;">{{ decision.title }}</a></h3>
+          <p>{{ decision.context | truncate: 180 }}</p>
+          <a href="{{ decision.url }}" style="font-size:0.8rem; color:var(--color-accent-light);">Read full record →</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
